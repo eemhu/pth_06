@@ -1,1 +1,1 @@
-var branches = ["apply-spotless"]
+var branches = ["main", "apply-spotless"]
