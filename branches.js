@@ -1,1 +1,1 @@
-var branches = ["latency-metrics-accuracy-fix", "apply-spotless", "div-by-zero-fix", "main"]
+var branches = ["latency-metrics-accuracy-fix", "apply-spotless", "metrics-reservoirs", "div-by-zero-fix", "main"]
