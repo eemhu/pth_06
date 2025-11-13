@@ -92,6 +92,8 @@ Collaboration diagram for com.teragrep.pth_06.planner.NestedTopNQuery:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e64fd51c45f4dc073521f7b1e56e0b8" id="r_a4e64fd51c45f4dc073521f7b1e56e0b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a4e64fd51c45f4dc073521f7b1e56e0b8">NestedTopNQuery</a> (final <a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1StreamDBClient.html">StreamDBClient</a> <a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>, final boolean isDebug)</td></tr>
 <tr class="separator:a4e64fd51c45f4dc073521f7b1e56e0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a06f4ddff599c5a021946b114f2018b" id="r_a2a06f4ddff599c5a021946b114f2018b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a2a06f4ddff599c5a021946b114f2018b">NestedTopNQuery</a> (final <a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1StreamDBClient.html">StreamDBClient</a> <a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>, final <a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html">ConfiguredLogger</a> configuredLogger)</td></tr>
+<tr class="separator:a2a06f4ddff599c5a021946b114f2018b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9a75398ae4f26212f007ce95c24c26f" id="r_ab9a75398ae4f26212f007ce95c24c26f"><td class="memItemLeft" align="right" valign="top">Table&lt; Record &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#ab9a75398ae4f26212f007ce95c24c26f">getTableStatement</a> (Condition journaldbConditionArg, Date day)</td></tr>
 <tr class="separator:ab9a75398ae4f26212f007ce95c24c26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1774c34559483df5630edaa9bcdc2f35" id="r_a1774c34559483df5630edaa9bcdc2f35"><td class="memItemLeft" align="right" valign="top">Field&lt; Long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a1774c34559483df5630edaa9bcdc2f35">logtime</a> ()</td></tr>
@@ -141,7 +143,7 @@ Static Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00060">60</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4e64fd51c45f4dc073521f7b1e56e0b8" name="a4e64fd51c45f4dc073521f7b1e56e0b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e64fd51c45f4dc073521f7b1e56e0b8">&#9670;&#160;</a></span>NestedTopNQuery()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e64fd51c45f4dc073521f7b1e56e0b8">&#9670;&#160;</a></span>NestedTopNQuery() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,12 +170,45 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00088">88</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                                       {</div>
-<div class="line"><span class="lineno">   89</span>        this.streamDBClient = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>;</div>
-<div class="line"><span class="lineno">   90</span>        this.logger = <span class="keyword">new</span> ConfiguredLogger(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#aa0e7fd999f63832772b7e94dbeebbfa2">classLogger</a>, isDebug);</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keyword">this</span>(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>, <span class="keyword">new</span> ConfiguredLogger(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#aa0e7fd999f63832772b7e94dbeebbfa2">classLogger</a>, isDebug));</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery_html_a3b167ab62112f56a1ad1efb08aea78c1"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">com.teragrep.pth_06.planner.NestedTopNQuery.streamDBClient</a></div><div class="ttdeci">final StreamDBClient streamDBClient</div><div class="ttdef"><b>Definition</b> <a href="NestedTopNQuery_8java_source.html#l00064">NestedTopNQuery.java:64</a></div></div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery_html_aa0e7fd999f63832772b7e94dbeebbfa2"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#aa0e7fd999f63832772b7e94dbeebbfa2">com.teragrep.pth_06.planner.NestedTopNQuery.classLogger</a></div><div class="ttdeci">static final Logger classLogger</div><div class="ttdef"><b>Definition</b> <a href="NestedTopNQuery_8java_source.html#l00062">NestedTopNQuery.java:62</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2a06f4ddff599c5a021946b114f2018b" name="a2a06f4ddff599c5a021946b114f2018b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a06f4ddff599c5a021946b114f2018b">&#9670;&#160;</a></span>NestedTopNQuery() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.teragrep.pth_06.planner.NestedTopNQuery.NestedTopNQuery </td>
+          <td>(</td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1StreamDBClient.html">StreamDBClient</a>&#160;</td>
+          <td class="paramname"><em>streamDBClient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html">ConfiguredLogger</a>&#160;</td>
+          <td class="paramname"><em>configuredLogger</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00093">93</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                                                                         {</div>
+<div class="line"><span class="lineno">   94</span>        this.streamDBClient = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>;</div>
+<div class="line"><span class="lineno">   95</span>        this.logger = configuredLogger;</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -193,10 +228,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00132">132</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                                     {</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a60ea10c9d60fad14038c014dc668c95d">directory</a>;</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00136">136</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>                                     {</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a60ea10c9d60fad14038c014dc668c95d">directory</a>;</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery_html_a60ea10c9d60fad14038c014dc668c95d"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a60ea10c9d60fad14038c014dc668c95d">com.teragrep.pth_06.planner.NestedTopNQuery.directory</a></div><div class="ttdeci">final Field&lt; String &gt; directory</div><div class="ttdef"><b>Definition</b> <a href="NestedTopNQuery_8java_source.html#l00076">NestedTopNQuery.java:76</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -227,36 +262,36 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00094">94</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   95</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a462ebadc5bf6e7adf747735a5b01c986">logger</a>.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#a432bade7d6310bed1e1b9a405fb53d56">debug</a>(<span class="stringliteral">&quot;NestedTopNQuery.getTableStatement called condition &lt;{}&gt; date &lt;{}&gt;&quot;</span>, journaldbConditionArg, day);</div>
-<div class="line"><span class="lineno">   96</span>        SelectOnConditionStep&lt;Record&gt; selectOnConditionStep = DSL</div>
-<div class="line"><span class="lineno">   97</span>                .select(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a00f88b88152000703a13ed5a5e6c04f9">resultFields</a>)</div>
-<div class="line"><span class="lineno">   98</span>                .from(GetArchivedObjectsFilterTable.FILTER_TABLE)</div>
-<div class="line"><span class="lineno">   99</span>                .innerJoin(JOURNALDB.LOGFILE)</div>
-<div class="line"><span class="lineno">  100</span>                .on(JOURNALDB.LOGFILE.HOST_ID.eq(GetArchivedObjectsFilterTable.host_id).and(JOURNALDB.LOGFILE.LOGTAG.eq(GetArchivedObjectsFilterTable.tag)));</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>.<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1StreamDBClient.html#a6473517c402c8daa3ca69bf9c731eccc">bloomEnabled</a>()) {</div>
-<div class="line"><span class="lineno">  103</span>            <span class="comment">// join all tables needed for the condition generated by walker</span></div>
-<div class="line"><span class="lineno">  104</span>            <span class="keyword">final</span> Set&lt;Table&lt;?&gt;&gt; tables = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>.<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1StreamDBClient.html#a10b6009fe85e5e0ca7221f77440632dc">walker</a>().conditionRequiredTables();</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (!tables.isEmpty()) {</div>
-<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">for</span> (<span class="keyword">final</span> Table&lt;?&gt; table : tables) {</div>
-<div class="line"><span class="lineno">  107</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a462ebadc5bf6e7adf747735a5b01c986">logger</a>.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#a03c44f8bbcceea9ce885498f428247cd">isInfoEnabled</a>()) {</div>
-<div class="line"><span class="lineno">  108</span>                        <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a462ebadc5bf6e7adf747735a5b01c986">logger</a>.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#adbd659cefc990abe9b2da58d3dae9970">info</a>(<span class="stringliteral">&quot;Left join pattern match table: &lt;{}&gt;&quot;</span>, table.getName());</div>
-<div class="line"><span class="lineno">  109</span>                    }</div>
-<div class="line"><span class="lineno">  110</span>                    selectOnConditionStep = selectOnConditionStep</div>
-<div class="line"><span class="lineno">  111</span>                            .leftJoin(table)</div>
-<div class="line"><span class="lineno">  112</span>                            .on(JOURNALDB.LOGFILE.ID.eq((Field&lt;ULong&gt;) table.field(<span class="stringliteral">&quot;partition_id&quot;</span>)));</div>
-<div class="line"><span class="lineno">  113</span>                }</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a462ebadc5bf6e7adf747735a5b01c986">logger</a>.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#a432bade7d6310bed1e1b9a405fb53d56">debug</a>(<span class="stringliteral">&quot;NestedTopNQuery.getTableStatement exit&quot;</span>);</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> selectOnConditionStep</div>
-<div class="line"><span class="lineno">  119</span>                .where(JOURNALDB.LOGFILE.LOGDATE.eq(day).and(journaldbConditionArg))</div>
-<div class="line"><span class="lineno">  120</span>                .orderBy(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#ae864ffadb7073cf676f81f1a8a333e5a">logtimeForOrderBy</a>, JOURNALDB.LOGFILE.ID.asc())</div>
-<div class="line"><span class="lineno">  121</span>                .asTable(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#abb73f3b854a5076c8336b082bf5fc2aa">innerTable</a>);</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00098">98</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>                                                                                      {</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a462ebadc5bf6e7adf747735a5b01c986">logger</a>.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#a432bade7d6310bed1e1b9a405fb53d56">debug</a>(<span class="stringliteral">&quot;NestedTopNQuery.getTableStatement called condition &lt;{}&gt; date &lt;{}&gt;&quot;</span>, journaldbConditionArg, day);</div>
+<div class="line"><span class="lineno">  100</span>        SelectOnConditionStep&lt;Record&gt; selectOnConditionStep = DSL</div>
+<div class="line"><span class="lineno">  101</span>                .select(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a00f88b88152000703a13ed5a5e6c04f9">resultFields</a>)</div>
+<div class="line"><span class="lineno">  102</span>                .from(GetArchivedObjectsFilterTable.FILTER_TABLE)</div>
+<div class="line"><span class="lineno">  103</span>                .innerJoin(JOURNALDB.LOGFILE)</div>
+<div class="line"><span class="lineno">  104</span>                .on(JOURNALDB.LOGFILE.HOST_ID.eq(GetArchivedObjectsFilterTable.host_id).and(JOURNALDB.LOGFILE.LOGTAG.eq(GetArchivedObjectsFilterTable.tag)));</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>.<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1StreamDBClient.html#a6473517c402c8daa3ca69bf9c731eccc">bloomEnabled</a>()) {</div>
+<div class="line"><span class="lineno">  107</span>            <span class="comment">// join all tables needed for the condition generated by walker</span></div>
+<div class="line"><span class="lineno">  108</span>            <span class="keyword">final</span> Set&lt;Table&lt;?&gt;&gt; tables = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a3b167ab62112f56a1ad1efb08aea78c1">streamDBClient</a>.<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1StreamDBClient.html#a10b6009fe85e5e0ca7221f77440632dc">walker</a>().conditionRequiredTables();</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (!tables.isEmpty()) {</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">for</span> (<span class="keyword">final</span> Table&lt;?&gt; table : tables) {</div>
+<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a462ebadc5bf6e7adf747735a5b01c986">logger</a>.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#a03c44f8bbcceea9ce885498f428247cd">isInfoEnabled</a>()) {</div>
+<div class="line"><span class="lineno">  112</span>                        <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a462ebadc5bf6e7adf747735a5b01c986">logger</a>.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#adbd659cefc990abe9b2da58d3dae9970">info</a>(<span class="stringliteral">&quot;Left join pattern match table: &lt;{}&gt;&quot;</span>, table.getName());</div>
+<div class="line"><span class="lineno">  113</span>                    }</div>
+<div class="line"><span class="lineno">  114</span>                    selectOnConditionStep = selectOnConditionStep</div>
+<div class="line"><span class="lineno">  115</span>                            .leftJoin(table)</div>
+<div class="line"><span class="lineno">  116</span>                            .on(JOURNALDB.LOGFILE.ID.eq((Field&lt;ULong&gt;) table.field(<span class="stringliteral">&quot;partition_id&quot;</span>)));</div>
+<div class="line"><span class="lineno">  117</span>                }</div>
+<div class="line"><span class="lineno">  118</span>            }</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a462ebadc5bf6e7adf747735a5b01c986">logger</a>.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#a432bade7d6310bed1e1b9a405fb53d56">debug</a>(<span class="stringliteral">&quot;NestedTopNQuery.getTableStatement exit&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> selectOnConditionStep</div>
+<div class="line"><span class="lineno">  123</span>                .where(JOURNALDB.LOGFILE.LOGDATE.eq(day).and(journaldbConditionArg))</div>
+<div class="line"><span class="lineno">  124</span>                .orderBy(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#ae864ffadb7073cf676f81f1a8a333e5a">logtimeForOrderBy</a>, JOURNALDB.LOGFILE.ID.asc())</div>
+<div class="line"><span class="lineno">  125</span>                .asTable(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#abb73f3b854a5076c8336b082bf5fc2aa">innerTable</a>);</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger_html_a03c44f8bbcceea9ce885498f428247cd"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#a03c44f8bbcceea9ce885498f428247cd">com.teragrep.pth_06.ConfiguredLogger.isInfoEnabled</a></div><div class="ttdeci">boolean isInfoEnabled()</div><div class="ttdef"><b>Definition</b> <a href="ConfiguredLogger_8java_source.html#l00085">ConfiguredLogger.java:85</a></div></div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger_html_a432bade7d6310bed1e1b9a405fb53d56"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#a432bade7d6310bed1e1b9a405fb53d56">com.teragrep.pth_06.ConfiguredLogger.debug</a></div><div class="ttdeci">void debug(final String message, final Object ... args)</div><div class="ttdef"><b>Definition</b> <a href="ConfiguredLogger_8java_source.html#l00064">ConfiguredLogger.java:64</a></div></div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger_html_adbd659cefc990abe9b2da58d3dae9970"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1ConfiguredLogger.html#adbd659cefc990abe9b2da58d3dae9970">com.teragrep.pth_06.ConfiguredLogger.info</a></div><div class="ttdeci">void info(final String message, final Object ... args)</div><div class="ttdef"><b>Definition</b> <a href="ConfiguredLogger_8java_source.html#l00073">ConfiguredLogger.java:73</a></div></div>
@@ -294,10 +329,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00136">136</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                             {</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a099a75e3ac6f6251d91047ace54a632d">id</a>;</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00140">140</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>                             {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a099a75e3ac6f6251d91047ace54a632d">id</a>;</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery_html_a099a75e3ac6f6251d91047ace54a632d"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a099a75e3ac6f6251d91047ace54a632d">com.teragrep.pth_06.planner.NestedTopNQuery.id</a></div><div class="ttdeci">final Field&lt; ULong &gt; id</div><div class="ttdef"><b>Definition</b> <a href="NestedTopNQuery_8java_source.html#l00075">NestedTopNQuery.java:75</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -317,10 +352,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00124">124</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                 {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a81db6c74366cd11e2cfb4736d5661919">logtime</a>;</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00128">128</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>                                 {</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a81db6c74366cd11e2cfb4736d5661919">logtime</a>;</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery_html_a81db6c74366cd11e2cfb4736d5661919"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a81db6c74366cd11e2cfb4736d5661919">com.teragrep.pth_06.planner.NestedTopNQuery.logtime</a></div><div class="ttdeci">final Field&lt; Long &gt; logtime</div><div class="ttdef"><b>Definition</b> <a href="NestedTopNQuery_8java_source.html#l00078">NestedTopNQuery.java:78</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -340,10 +375,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00128">128</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                                  {</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a922f2a254f80c9837cfa8861fbe4dbe0">stream</a>;</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NestedTopNQuery_8java_source.html#l00132">132</a> of file <a class="el" href="NestedTopNQuery_8java_source.html">NestedTopNQuery.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                  {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a922f2a254f80c9837cfa8861fbe4dbe0">stream</a>;</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery_html_a922f2a254f80c9837cfa8861fbe4dbe0"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1NestedTopNQuery.html#a922f2a254f80c9837cfa8861fbe4dbe0">com.teragrep.pth_06.planner.NestedTopNQuery.stream</a></div><div class="ttdeci">final Field&lt; String &gt; stream</div><div class="ttdef"><b>Definition</b> <a href="NestedTopNQuery_8java_source.html#l00077">NestedTopNQuery.java:77</a></div></div>
 </div><!-- fragment -->
 </div>
