@@ -45,31 +45,7 @@
  */
 package com.teragrep.pth_06;
 
-import org.apache.kafka.common.TopicPartition;
+public interface Stubable {
 
-import java.io.Serializable;
-
-/**
- * <h1>Kafka Topic Partition Offset Metadata</h1> Class for holding serializable metadata of Kafka topic partition.
- *
- * @since 08/06/2022
- * @author Mikko Kortelainen
- */
-public class KafkaTopicPartitionOffsetMetadata implements Serializable {
-
-    public final TopicPartition topicPartition;
-    public final Long startOffset;
-    public final Long endOffset;
-
-    public KafkaTopicPartitionOffsetMetadata(TopicPartition topicPartition, Long startOffset, Long endOffset) {
-        this.topicPartition = topicPartition;
-        this.startOffset = startOffset;
-        this.endOffset = endOffset;
-    }
-
-    @Override
-    public String toString() {
-        return "KafkaTopicPartitionOffsetMetadata{" + "topicPartition=" + topicPartition + ", offset=[" + startOffset
-                + ", " + endOffset + "]" + '}';
-    }
+    public abstract boolean isStub();
 }

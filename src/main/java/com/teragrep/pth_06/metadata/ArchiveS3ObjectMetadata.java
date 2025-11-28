@@ -43,53 +43,27 @@
  * Teragrep, the applicable Commercial License may apply to this file if you as
  * a licensee so wish it.
  */
-package com.teragrep.pth_06;
+package com.teragrep.pth_06.metadata;
 
-import java.io.Serializable;
+import com.teragrep.pth_06.Stubable;
 
-/**
- * <h1>Archive S3 Object Metadata</h1> Class for holding a serializable S3 archive object metadata.
- *
- * @since 17/01/2022
- * @author Mikko Kortelainen
- */
-public class ArchiveS3ObjectMetadata implements Serializable {
+public interface ArchiveS3ObjectMetadata extends Stubable {
 
-    public final String id;
-    public final String bucket;
-    public final String path;
-    public final String directory;
-    public final String stream;
-    public final String host;
-    public final long logtimeEpoch;
-    public final long compressedSize;
-    public final long uncompressedSize;
+    long uncompressedSize();
 
-    public ArchiveS3ObjectMetadata(
-            String id,
-            String bucket,
-            String path,
-            String directory,
-            String stream,
-            String host,
-            long logtimeEpoch,
-            long compressedSize,
-            long uncompressedSize
-    ) {
-        this.id = id;
-        this.bucket = bucket;
-        this.path = path;
-        this.directory = directory;
-        this.stream = stream;
-        this.host = host;
-        this.logtimeEpoch = logtimeEpoch;
-        this.compressedSize = compressedSize;
-        this.uncompressedSize = uncompressedSize;
-    }
+    String id();
 
-    @Override
-    public String toString() {
-        return "ArchiveS3ObjectMetadata{" + "bucket='" + bucket + '\'' + ", path='" + path + '\'' + ", directory='"
-                + directory + '\'' + ", stream='" + stream + '\'' + ", host='" + host + '\'' + '}';
-    }
+    String path();
+
+    String bucket();
+
+    String directory();
+
+    String stream();
+
+    String host();
+
+    long logtimeEpoch();
+
+    long compressedSize();
 }

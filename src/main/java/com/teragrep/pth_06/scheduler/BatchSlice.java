@@ -45,64 +45,20 @@
  */
 package com.teragrep.pth_06.scheduler;
 
-import com.teragrep.pth_06.ArchiveS3ObjectMetadata;
-import com.teragrep.pth_06.KafkaTopicPartitionOffsetMetadata;
+import com.teragrep.pth_06.metadata.ArchiveS3ObjectMetadata;
+import com.teragrep.pth_06.metadata.KafkaTopicPartitionOffsetMetadata;
 
-import java.io.Serializable;
+public interface BatchSlice {
 
-/**
- * <h1>Batch Slice</h1> Class for representing a serializable batch slice. Can be constructed using S3 or Kafka
- * partition metadata.
- *
- * @see ArchiveS3ObjectMetadata
- * @see KafkaTopicPartitionOffsetMetadata
- * @since 08/06/2022
- * @author Mikko Kortelainen
- */
-public final class BatchSlice implements Serializable {
-
-    public static enum Type {
+    public enum Type {
         ARCHIVE, KAFKA
     }
 
-    public final Type type;
-    public final ArchiveS3ObjectMetadata archiveS3ObjectMetadata;
-    public final KafkaTopicPartitionOffsetMetadata kafkaTopicPartitionOffsetMetadata;
+    public abstract long getSize();
 
-    public BatchSlice(ArchiveS3ObjectMetadata archiveS3ObjectMetadata) {
-        this.type = Type.ARCHIVE;
-        this.archiveS3ObjectMetadata = archiveS3ObjectMetadata;
-        this.kafkaTopicPartitionOffsetMetadata = null;
-    }
+    public abstract ArchiveS3ObjectMetadata archiveS3ObjectMetadata();
 
-    public BatchSlice(KafkaTopicPartitionOffsetMetadata kafkaTopicPartitionOffsetMetadata) {
-        this.type = Type.KAFKA;
-        this.archiveS3ObjectMetadata = null;
-        this.kafkaTopicPartitionOffsetMetadata = kafkaTopicPartitionOffsetMetadata;
-    }
+    public abstract KafkaTopicPartitionOffsetMetadata kafkaTopicPartitionOffsetMetadata();
 
-    public long getSize() {
-        // FIXME compressed size to realsize estimate
-        switch (type) {
-            case ARCHIVE:
-                // FIXME: Dummy metadata object if not present?
-                if (archiveS3ObjectMetadata != null) {
-                    return archiveS3ObjectMetadata.compressedSize;
-                }
-                else {
-                    throw new RuntimeException("Expected archive s3 object metadata, instead was null");
-                }
-            case KAFKA:
-                // TODO estimate based on offset delta
-                return 1024 * 1024 * 16;
-            default:
-                throw new IllegalStateException("unknown BatchSliceType " + type);
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "BatchSlice{" + "batchSliceType=" + type + ", archiveS3ObjectMetadata=" + archiveS3ObjectMetadata
-                + ", kafkaTopicPartitionOffsetMetadata=" + kafkaTopicPartitionOffsetMetadata + '}';
-    }
+    public abstract Type type();
 }

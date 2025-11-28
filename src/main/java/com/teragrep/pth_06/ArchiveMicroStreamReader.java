@@ -47,6 +47,7 @@ package com.teragrep.pth_06;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.teragrep.pth_06.config.Config;
+import com.teragrep.pth_06.metadata.ArchiveS3ObjectMetadata;
 import com.teragrep.pth_06.planner.*;
 import com.teragrep.pth_06.planner.offset.DatasourceOffset;
 import com.teragrep.pth_06.planner.offset.KafkaOffset;
@@ -236,15 +237,15 @@ public final class ArchiveMicroStreamReader implements MicroBatchStream {
         LOGGER.debug("ArchiveMicroStreamReader.planInputPartitions: start <{}>, end <{}>", start, end);
         List<InputPartition> inputPartitions = new LinkedList<>();
 
-        Batch currentBatch = new Batch(config, aq, kq).processRange(start, end);
+        LinkedList<LinkedList<BatchSlice>> currentBatch = new Batch(config, aq, kq).processRange(start, end);
 
         for (LinkedList<BatchSlice> taskObjectList : currentBatch) {
 
             // archive tasks
             LinkedList<ArchiveS3ObjectMetadata> archiveTaskList = new LinkedList<>();
             for (BatchSlice batchSlice : taskObjectList) {
-                if (batchSlice.type.equals(BatchSlice.Type.ARCHIVE)) {
-                    archiveTaskList.add(batchSlice.archiveS3ObjectMetadata);
+                if (batchSlice.type().equals(BatchSlice.Type.ARCHIVE)) {
+                    archiveTaskList.add(batchSlice.archiveS3ObjectMetadata());
                 }
             }
 
@@ -267,14 +268,14 @@ public final class ArchiveMicroStreamReader implements MicroBatchStream {
 
             // kafka tasks
             for (BatchSlice batchSlice : taskObjectList) {
-                if (batchSlice.type.equals(BatchSlice.Type.KAFKA)) {
+                if (batchSlice.type().equals(BatchSlice.Type.KAFKA)) {
                     inputPartitions
                             .add(
                                     new KafkaMicroBatchInputPartition(
                                             config.kafkaConfig.executorOpts,
-                                            batchSlice.kafkaTopicPartitionOffsetMetadata.topicPartition,
-                                            batchSlice.kafkaTopicPartitionOffsetMetadata.startOffset,
-                                            batchSlice.kafkaTopicPartitionOffsetMetadata.endOffset,
+                                            batchSlice.kafkaTopicPartitionOffsetMetadata().topicPartition(),
+                                            batchSlice.kafkaTopicPartitionOffsetMetadata().startOffset(),
+                                            batchSlice.kafkaTopicPartitionOffsetMetadata().endOffset(),
                                             config.kafkaConfig.executorConfig,
                                             config.kafkaConfig.skipNonRFC5424Records
                                     )

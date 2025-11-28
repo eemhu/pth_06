@@ -43,45 +43,29 @@
  * Teragrep, the applicable Commercial License may apply to this file if you as
  * a licensee so wish it.
  */
-package com.teragrep.pth_06.scheduler;
+package com.teragrep.pth_06.metadata;
 
-import java.util.LinkedList;
+import org.apache.kafka.common.TopicPartition;
 
-/**
- * <h1>Batch Task Queue</h1> Class for creating a queue of batch tasks. Uses LinkedList with BatchSlices.
- *
- * @see BatchSliceImpl
- * @since 23/02/2022
- * @author Mikko Kortelainen
- */
-public final class BatchTaskQueue {
+public final class KafkaTopicPartitionOffsetMetadataStub implements KafkaTopicPartitionOffsetMetadata {
 
-    private final float compressionRatio = 15.5F;
-    private final float contextSwitchCost = 0.1F; // seconds
-    private final float processingSpeed = 273 / 2F; // rlo_06 273 megabytes per second, spark the half of it
-
-    private final LinkedList<BatchSlice> queue;
-    private float queueTime = 0L; // seconds how long the queue will take to process
-
-    BatchTaskQueue() {
-        this.queue = new LinkedList<>();
+    @Override
+    public TopicPartition topicPartition() {
+        throw new UnsupportedOperationException("Stub object");
     }
 
-    // give estimate on the queueTime after adding an object
-    float estimate(BatchSlice batchSlice) {
-        return queueTime + (batchSlice.getSize() * compressionRatio) / 1024 / 1024 / processingSpeed;
+    @Override
+    public Long startOffset() {
+        throw new UnsupportedOperationException("Stub object");
     }
 
-    void add(BatchSlice batchSlice) {
-        queue.add(batchSlice);
-        queueTime = estimate(batchSlice);
+    @Override
+    public Long endOffset() {
+        throw new UnsupportedOperationException("Stub object");
     }
 
-    public LinkedList<BatchSlice> getQueue() {
-        return queue;
-    }
-
-    public float getQueueTime() {
-        return queueTime;
+    @Override
+    public boolean isStub() {
+        return true;
     }
 }

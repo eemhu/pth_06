@@ -43,13 +43,57 @@
  * Teragrep, the applicable Commercial License may apply to this file if you as
  * a licensee so wish it.
  */
-package com.teragrep.pth_06.scheduler;
+package com.teragrep.pth_06.metadata;
 
-import org.apache.spark.sql.connector.read.streaming.Offset;
+public final class ArchiveS3ObjectMetadataStub implements ArchiveS3ObjectMetadata {
 
-import java.util.LinkedList;
+    @Override
+    public long uncompressedSize() {
+        throw new UnsupportedOperationException("Stub object");
+    }
 
-public abstract class BatchSliceCollection extends LinkedList<BatchSlice> {
+    @Override
+    public String id() {
+        throw new UnsupportedOperationException("Stub object");
+    }
 
-    public abstract BatchSliceCollection processRange(Offset start, Offset end);
+    @Override
+    public String path() {
+        throw new UnsupportedOperationException("Stub object");
+    }
+
+    @Override
+    public String bucket() {
+        throw new UnsupportedOperationException("Stub object");
+    }
+
+    @Override
+    public String directory() {
+        throw new UnsupportedOperationException("Stub object");
+    }
+
+    @Override
+    public String stream() {
+        throw new UnsupportedOperationException("Stub object");
+    }
+
+    @Override
+    public String host() {
+        throw new UnsupportedOperationException("Stub object");
+    }
+
+    @Override
+    public long logtimeEpoch() {
+        throw new UnsupportedOperationException("Stub object");
+    }
+
+    @Override
+    public long compressedSize() {
+        throw new UnsupportedOperationException("Stub object");
+    }
+
+    @Override
+    public boolean isStub() {
+        return true;
+    }
 }

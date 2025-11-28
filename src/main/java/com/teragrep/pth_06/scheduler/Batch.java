@@ -53,19 +53,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <h1>Batch</h1> Contains the necessary operations to form a Spark batch. It consists of Archive and/or Kafka data.
- * Each batch is constructed from a {@link BatchSliceCollection}, which in turn consists of multiple
- * {@link BatchSlice}s. Each of the slices contain the actual data.
+ * Each batch is constructed from a {@link BatchFactory}, which in turn consists of multiple {@link BatchSliceImpl}s.
+ * Each of the slices contain the actual data.
  * 
  * @author Eemeli Hukka
  */
-public final class Batch extends LinkedList<LinkedList<BatchSlice>> {
+public final class Batch {
 
     private final Logger LOGGER = LoggerFactory.getLogger(Batch.class);
-    private long numberOfBatches = 0;
     private final LinkedList<BatchTaskQueue> runQueueArray;
+    private final LinkedList<LinkedList<BatchSlice>> batchList;
     private final Config config;
     private final ArchiveQuery archiveQuery;
     private final KafkaQuery kafkaQuery;
@@ -73,6 +74,7 @@ public final class Batch extends LinkedList<LinkedList<BatchSlice>> {
     public Batch(Config config, ArchiveQuery aq, KafkaQuery kq) {
         this.config = config;
         this.runQueueArray = new LinkedList<>();
+        this.batchList = new LinkedList<>();
 
         for (int i = 0; i < config.batchConfig.numPartitions; i++) {
             this.runQueueArray.add(new BatchTaskQueue());
@@ -82,32 +84,26 @@ public final class Batch extends LinkedList<LinkedList<BatchSlice>> {
         this.kafkaQuery = kq;
     }
 
-    public Batch processRange(Offset start, Offset end) {
+    public LinkedList<LinkedList<BatchSlice>> processRange(Offset start, Offset end) {
         LOGGER.debug("processRange");
 
-        BatchSliceCollection slice = null;
+        final List<BatchSlice> slices = new LinkedList<>();
         if (config.isArchiveEnabled) {
-            slice = new ArchiveBatchSliceCollection(this.archiveQuery).processRange(start, end);
+            slices.addAll(new ArchiveBatchFactory(this.archiveQuery).fromRange(start, end));
         }
 
         if (config.isKafkaEnabled) {
-            if (slice == null) {
-                slice = new KafkaBatchSliceCollection(this.kafkaQuery).processRange(start, end);
-            }
-            else {
-                slice.addAll(new KafkaBatchSliceCollection(this.kafkaQuery).processRange(start, end));
-            }
+            slices.addAll(new KafkaBatchFactory(this.kafkaQuery).fromRange(start, end));
         }
-        if (slice != null && !slice.isEmpty()) {
-            this.addSlice(slice);
+
+        if (!slices.isEmpty()) {
+            this.addSlice(slices);
         }
 
         return this.getBatch();
     }
 
-    public void addSlice(LinkedList<BatchSlice> sliceCollection) {
-        numberOfBatches++;
-
+    public void addSlice(List<BatchSlice> sliceCollection) {
         while (!sliceCollection.isEmpty()) {
             BatchSlice longestObject = null;
 
@@ -129,7 +125,7 @@ public final class Batch extends LinkedList<LinkedList<BatchSlice>> {
 
                 // find shortest queue
                 BatchTaskQueue shortestQueue = null;
-                for (BatchTaskQueue btq : runQueueArray) {
+                for (final BatchTaskQueue btq : runQueueArray) {
                     if (shortestQueue == null) {
                         shortestQueue = btq;
                     }
@@ -150,13 +146,13 @@ public final class Batch extends LinkedList<LinkedList<BatchSlice>> {
         }
     }
 
-    public Batch getBatch() {
-        this.clear(); // clear on getBatch?
-        for (BatchTaskQueue btq : runQueueArray) {
-            this.add(btq.getQueue());
+    public LinkedList<LinkedList<BatchSlice>> getBatch() {
+        batchList.clear(); // clear on getBatch?
+        for (final BatchTaskQueue btq : runQueueArray) {
+            batchList.add(btq.getQueue());
         }
-        LOGGER.debug("getBatch: " + this);
-        return this;
+        LOGGER.debug("getBatch: <{}>", batchList);
+        return batchList;
     }
 
 }

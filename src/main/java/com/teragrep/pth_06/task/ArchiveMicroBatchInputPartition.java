@@ -45,9 +45,8 @@
  */
 package com.teragrep.pth_06.task;
 
-import com.teragrep.pth_06.ArchiveS3ObjectMetadata;
-
 // logger
+import com.teragrep.pth_06.metadata.ArchiveS3ObjectMetadata;
 import org.apache.spark.sql.connector.read.InputPartition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

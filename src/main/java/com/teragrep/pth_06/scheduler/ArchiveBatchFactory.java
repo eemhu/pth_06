@@ -45,7 +45,7 @@
  */
 package com.teragrep.pth_06.scheduler;
 
-import com.teragrep.pth_06.ArchiveS3ObjectMetadata;
+import com.teragrep.pth_06.metadata.ArchiveS3ObjectMetadataImpl;
 import com.teragrep.pth_06.planner.ArchiveQuery;
 import com.teragrep.pth_06.planner.offset.DatasourceOffset;
 import org.apache.spark.sql.connector.read.streaming.Offset;
@@ -57,21 +57,25 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Date;
+import java.util.LinkedList;
+import java.util.List;
 
-public final class ArchiveBatchSliceCollection extends BatchSliceCollection {
+public final class ArchiveBatchFactory implements BatchFactory {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(ArchiveBatchSliceCollection.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(ArchiveBatchFactory.class);
     private final ArchiveQuery aq;
+    private final List<BatchSlice> batchSlices;
 
-    public ArchiveBatchSliceCollection(ArchiveQuery aq) {
+    public ArchiveBatchFactory(ArchiveQuery aq) {
         super();
         this.aq = aq;
+        this.batchSlices = new LinkedList<>();
     }
 
-    public ArchiveBatchSliceCollection processRange(Offset start, Offset end) {
+    public List<BatchSlice> fromRange(Offset start, Offset end) {
         LOGGER.debug("processRange(): args: start: " + start + " end: " + end);
 
-        this.clear(); // clear internal list
+        batchSlices.clear(); // clear internal list
 
         Result<Record11<ULong, String, String, String, String, Date, String, String, Long, ULong, ULong>> result = aq
                 .processBetweenUnixEpochHours(
@@ -86,8 +90,8 @@ public final class ArchiveBatchSliceCollection extends BatchSliceCollection {
                 uncompressedSize = r.get(10, Long.class);
             }
 
-            this
-                    .add(new BatchSlice(new ArchiveS3ObjectMetadata(r.get(0, String.class), // id
+            batchSlices
+                    .add(new BatchSliceImpl(new ArchiveS3ObjectMetadataImpl(r.get(0, String.class), // id
                             r.get(6, String.class), // bucket
                             r.get(7, String.class), // path
                             r.get(1, String.class), // directory
@@ -98,6 +102,6 @@ public final class ArchiveBatchSliceCollection extends BatchSliceCollection {
                             uncompressedSize // uncompressedSize
                     )));
         }
-        return this;
+        return batchSlices;
     }
 }

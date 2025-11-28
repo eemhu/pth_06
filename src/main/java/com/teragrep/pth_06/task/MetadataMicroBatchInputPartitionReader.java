@@ -47,7 +47,7 @@ package com.teragrep.pth_06.task;
 
 import com.codahale.metrics.MetricRegistry;
 import com.google.gson.Gson;
-import com.teragrep.pth_06.ArchiveS3ObjectMetadata;
+import com.teragrep.pth_06.metadata.ArchiveS3ObjectMetadata;
 import com.teragrep.rad_01.AuditPlugin;
 import com.teragrep.rad_01.AuditPluginFactory;
 import org.apache.spark.sql.catalyst.InternalRow;
@@ -120,16 +120,16 @@ public class MetadataMicroBatchInputPartitionReader implements PartitionReader<I
 
             // Use metadata java object to easily form a json representation of metadata
             final String rawColumn = new Gson()
-                    .toJson(new Metadata(taskObject.uncompressedSize, taskObject.compressedSize));
+                    .toJson(new Metadata(taskObject.uncompressedSize(), taskObject.compressedSize()));
             // use logtimeEpoch as _time
             rowWriter
-                    .write(0, rfc3339ToEpoch(Instant.ofEpochSecond(taskObject.logtimeEpoch).atZone(ZoneId.systemDefault())));
+                    .write(0, rfc3339ToEpoch(Instant.ofEpochSecond(taskObject.logtimeEpoch()).atZone(ZoneId.systemDefault())));
             rowWriter.write(1, UTF8String.fromString(rawColumn));
-            rowWriter.write(2, UTF8String.fromString(taskObject.directory));
-            rowWriter.write(3, UTF8String.fromString(taskObject.stream));
-            rowWriter.write(4, UTF8String.fromString(taskObject.host));
+            rowWriter.write(2, UTF8String.fromString(taskObject.directory()));
+            rowWriter.write(3, UTF8String.fromString(taskObject.stream()));
+            rowWriter.write(4, UTF8String.fromString(taskObject.host()));
             rowWriter.write(5, UTF8String.fromString(""));
-            rowWriter.write(6, UTF8String.fromString(taskObject.id));
+            rowWriter.write(6, UTF8String.fromString(taskObject.id()));
             rowWriter.write(7, currentOffset++);
             rowWriter.write(8, UTF8String.fromString(""));
             return true;

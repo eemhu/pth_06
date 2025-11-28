@@ -47,8 +47,8 @@ package com.teragrep.pth_06.task;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.codahale.metrics.MetricRegistry;
+import com.teragrep.pth_06.metadata.ArchiveS3ObjectMetadata;
 import com.teragrep.pth_06.metrics.TaskMetric;
-import com.teragrep.pth_06.ArchiveS3ObjectMetadata;
 import com.teragrep.pth_06.task.s3.Pth06S3Client;
 import com.teragrep.pth_06.task.s3.RowConverter;
 import com.teragrep.rad_01.AuditPlugin;
@@ -140,17 +140,19 @@ class ArchiveMicroBatchInputPartitionReader implements PartitionReader<InternalR
                 rowConverter = new RowConverter(
                         auditPlugin,
                         s3client,
-                        taskObjectList.getFirst().id,
-                        taskObjectList.getFirst().bucket,
-                        taskObjectList.getFirst().path,
-                        taskObjectList.getFirst().directory,
-                        taskObjectList.getFirst().stream,
-                        taskObjectList.getFirst().host,
+                        taskObjectList.getFirst().id(),
+                        taskObjectList.getFirst().bucket(),
+                        taskObjectList.getFirst().path(),
+                        taskObjectList.getFirst().directory(),
+                        taskObjectList.getFirst().stream(),
+                        taskObjectList.getFirst().host(),
                         skipNonRFC5424Files
                 );
 
-                metricRegistry.counter("ArchiveCompressedBytesProcessed").inc(taskObjectList.getFirst().compressedSize);
-                metricRegistry.counter("BytesProcessed").inc(taskObjectList.getFirst().uncompressedSize);
+                metricRegistry
+                        .counter("ArchiveCompressedBytesProcessed")
+                        .inc(taskObjectList.getFirst().compressedSize());
+                metricRegistry.counter("BytesProcessed").inc(taskObjectList.getFirst().uncompressedSize());
                 metricRegistry.counter("ArchiveObjectsProcessed").inc();
                 metricRegistry.meter("BytesPerSecond").mark();
                 metricRegistry.meter("RecordsPerSecond").mark();
@@ -175,18 +177,18 @@ class ArchiveMicroBatchInputPartitionReader implements PartitionReader<InternalR
                     rowConverter = new RowConverter(
                             auditPlugin,
                             s3client,
-                            taskObjectList.getFirst().id,
-                            taskObjectList.getFirst().bucket,
-                            taskObjectList.getFirst().path,
-                            taskObjectList.getFirst().directory,
-                            taskObjectList.getFirst().stream,
-                            taskObjectList.getFirst().host,
+                            taskObjectList.getFirst().id(),
+                            taskObjectList.getFirst().bucket(),
+                            taskObjectList.getFirst().path(),
+                            taskObjectList.getFirst().directory(),
+                            taskObjectList.getFirst().stream(),
+                            taskObjectList.getFirst().host(),
                             skipNonRFC5424Files
                     );
                     metricRegistry
                             .counter("ArchiveCompressedBytesProcessed")
-                            .inc(taskObjectList.getFirst().compressedSize);
-                    metricRegistry.counter("BytesProcessed").inc(taskObjectList.getFirst().uncompressedSize);
+                            .inc(taskObjectList.getFirst().compressedSize());
+                    metricRegistry.counter("BytesProcessed").inc(taskObjectList.getFirst().uncompressedSize());
                     metricRegistry.counter("ArchiveObjectsProcessed").inc();
                     rowConverter.open();
                 }

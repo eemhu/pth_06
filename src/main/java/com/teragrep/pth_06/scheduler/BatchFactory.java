@@ -45,43 +45,11 @@
  */
 package com.teragrep.pth_06.scheduler;
 
-import java.util.LinkedList;
+import org.apache.spark.sql.connector.read.streaming.Offset;
 
-/**
- * <h1>Batch Task Queue</h1> Class for creating a queue of batch tasks. Uses LinkedList with BatchSlices.
- *
- * @see BatchSliceImpl
- * @since 23/02/2022
- * @author Mikko Kortelainen
- */
-public final class BatchTaskQueue {
+import java.util.List;
 
-    private final float compressionRatio = 15.5F;
-    private final float contextSwitchCost = 0.1F; // seconds
-    private final float processingSpeed = 273 / 2F; // rlo_06 273 megabytes per second, spark the half of it
+public interface BatchFactory {
 
-    private final LinkedList<BatchSlice> queue;
-    private float queueTime = 0L; // seconds how long the queue will take to process
-
-    BatchTaskQueue() {
-        this.queue = new LinkedList<>();
-    }
-
-    // give estimate on the queueTime after adding an object
-    float estimate(BatchSlice batchSlice) {
-        return queueTime + (batchSlice.getSize() * compressionRatio) / 1024 / 1024 / processingSpeed;
-    }
-
-    void add(BatchSlice batchSlice) {
-        queue.add(batchSlice);
-        queueTime = estimate(batchSlice);
-    }
-
-    public LinkedList<BatchSlice> getQueue() {
-        return queue;
-    }
-
-    public float getQueueTime() {
-        return queueTime;
-    }
+    public abstract List<BatchSlice> fromRange(Offset start, Offset end);
 }
