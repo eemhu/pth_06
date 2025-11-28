@@ -64,15 +64,21 @@ public final class BatchSliceImpl implements Serializable, BatchSlice {
     public final ArchiveS3ObjectMetadata archiveS3ObjectMetadata;
     public final KafkaTopicPartitionOffsetMetadata kafkaTopicPartitionOffsetMetadata;
 
-    public BatchSliceImpl(ArchiveS3ObjectMetadataImpl archiveS3ObjectMetadata) {
-        this.type = Type.ARCHIVE;
-        this.archiveS3ObjectMetadata = archiveS3ObjectMetadata;
-        this.kafkaTopicPartitionOffsetMetadata = new KafkaTopicPartitionOffsetMetadataStub();
+    public BatchSliceImpl(final ArchiveS3ObjectMetadata archiveS3ObjectMetadata) {
+        this(Type.ARCHIVE, archiveS3ObjectMetadata, new KafkaTopicPartitionOffsetMetadataStub());
     }
 
-    public BatchSliceImpl(KafkaTopicPartitionOffsetMetadataImpl kafkaTopicPartitionOffsetMetadata) {
-        this.type = Type.KAFKA;
-        this.archiveS3ObjectMetadata = new ArchiveS3ObjectMetadataStub();
+    public BatchSliceImpl(final KafkaTopicPartitionOffsetMetadata kafkaTopicPartitionOffsetMetadata) {
+        this(Type.KAFKA, new ArchiveS3ObjectMetadataStub(), kafkaTopicPartitionOffsetMetadata);
+    }
+
+    private BatchSliceImpl(
+            final Type type,
+            final ArchiveS3ObjectMetadata archiveS3ObjectMetadata,
+            final KafkaTopicPartitionOffsetMetadata kafkaTopicPartitionOffsetMetadata
+    ) {
+        this.type = type;
+        this.archiveS3ObjectMetadata = archiveS3ObjectMetadata;
         this.kafkaTopicPartitionOffsetMetadata = kafkaTopicPartitionOffsetMetadata;
     }
 
