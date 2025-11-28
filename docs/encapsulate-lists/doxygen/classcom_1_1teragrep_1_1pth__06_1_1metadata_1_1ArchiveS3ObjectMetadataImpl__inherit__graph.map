@@ -1,0 +1,9 @@
+<map id="com.teragrep.pth_06.metadata.ArchiveS3ObjectMetadataImpl" name="com.teragrep.pth_06.metadata.ArchiveS3ObjectMetadataImpl">
+<area shape="rect" id="Node000001" title=" " alt="" coords="34,167,262,207"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,86,104,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,119,129,165,126,168,76,123"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1teragrep_1_1pth__06_1_1metadata_1_1ArchiveS3ObjectMetadata.html" title=" " alt="" coords="129,79,357,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,130,171,168,167,164,210,126"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1teragrep_1_1pth__06_1_1Stubable.html" title=" " alt="" coords="133,5,352,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,44,245,79,240,79,240,44"/>
+</map>

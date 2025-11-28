@@ -1,0 +1,9 @@
+<map id="com.teragrep.pth_06.metadata.KafkaTopicPartitionOffsetMetadata" name="com.teragrep.pth_06.metadata.KafkaTopicPartitionOffsetMetadata">
+<area shape="rect" id="Node000001" title=" " alt="" coords="272,37,519,77"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1teragrep_1_1pth__06_1_1metadata_1_1KafkaTopicPartitionOffsetMetadataImpl.html" title=" " alt="" coords="567,5,843,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="532,41,566,37,567,42,532,46"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1teragrep_1_1pth__06_1_1metadata_1_1KafkaTopicPartitionOffsetMetadataStub.html" title=" " alt="" coords="567,69,843,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="532,69,567,72,566,78,532,74"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1teragrep_1_1pth__06_1_1Stubable.html" title=" " alt="" coords="5,45,224,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,55,272,55,272,60,238,60"/>
+</map>
