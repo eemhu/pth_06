@@ -76,6 +76,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">com.teragrep.pth_06.planner.MockDBRowImpl Class Reference</div></div>
 </div><!--header-->
@@ -150,10 +151,15 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a7a005b354f9912c356d695e4befe6939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3138a216a47e717936af81c0bdbe0ded" id="r_a3138a216a47e717936af81c0bdbe0ded"><td class="memItemLeft" align="right" valign="top">final Long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a></td></tr>
 <tr class="separator:a3138a216a47e717936af81c0bdbe0ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a8bb2c9a150bbd457abf15e9e94c01bcd" id="r_a8bb2c9a150bbd457abf15e9e94c01bcd"><td class="memItemLeft" align="right" valign="top">static final Comparator&lt; <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html">MockDBRow</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a8bb2c9a150bbd457abf15e9e94c01bcd">COMPARATOR</a></td></tr>
+<tr class="separator:a8bb2c9a150bbd457abf15e9e94c01bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00051">51</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00052">52</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a491c6aa5a3dca1d76ed1e18c65967957" name="a491c6aa5a3dca1d76ed1e18c65967957"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a491c6aa5a3dca1d76ed1e18c65967957">&#9670;&#160;</a></span>MockDBRowImpl()</h2>
@@ -235,31 +241,31 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00065">65</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>      {</div>
-<div class="line"><span class="lineno">   78</span>        this.id = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a5721c5202c01b3fd47011693536c0247">id</a>;</div>
-<div class="line"><span class="lineno">   79</span>        this.directory = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a>;</div>
-<div class="line"><span class="lineno">   80</span>        this.stream = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a>;</div>
-<div class="line"><span class="lineno">   81</span>        this.host = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a>;</div>
-<div class="line"><span class="lineno">   82</span>        this.logtag = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a>;</div>
-<div class="line"><span class="lineno">   83</span>        this.logdate = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a>;</div>
-<div class="line"><span class="lineno">   84</span>        this.bucket = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a>;</div>
-<div class="line"><span class="lineno">   85</span>        this.path = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a>;</div>
-<div class="line"><span class="lineno">   86</span>        this.logtime = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a>;</div>
-<div class="line"><span class="lineno">   87</span>        this.filesize = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a>;</div>
-<div class="line"><span class="lineno">   88</span>        this.uncompressedFilesize = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a>;</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a3138a216a47e717936af81c0bdbe0ded"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">com.teragrep.pth_06.planner.MockDBRowImpl.uncompressedFilesize</a></div><div class="ttdeci">final Long uncompressedFilesize</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00063">MockDBRowImpl.java:63</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a4e0edf049f9484e0e816f16daa1cc6ad"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">com.teragrep.pth_06.planner.MockDBRowImpl.host</a></div><div class="ttdeci">final String host</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00056">MockDBRowImpl.java:56</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a5721c5202c01b3fd47011693536c0247"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a5721c5202c01b3fd47011693536c0247">com.teragrep.pth_06.planner.MockDBRowImpl.id</a></div><div class="ttdeci">final long id</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00053">MockDBRowImpl.java:53</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a7a005b354f9912c356d695e4befe6939"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">com.teragrep.pth_06.planner.MockDBRowImpl.filesize</a></div><div class="ttdeci">final long filesize</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00062">MockDBRowImpl.java:62</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a92085e7ae34e4667e819c4d7f507179e"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">com.teragrep.pth_06.planner.MockDBRowImpl.stream</a></div><div class="ttdeci">final String stream</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00055">MockDBRowImpl.java:55</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_aa67ed8d74482205e8584da9718a9aa46"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">com.teragrep.pth_06.planner.MockDBRowImpl.logtag</a></div><div class="ttdeci">final String logtag</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00057">MockDBRowImpl.java:57</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_ac307ee92ada9f34eee08b326373949d3"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">com.teragrep.pth_06.planner.MockDBRowImpl.bucket</a></div><div class="ttdeci">final String bucket</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00059">MockDBRowImpl.java:59</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_aca0a1923507969ad19bdcf8cbee7ee40"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">com.teragrep.pth_06.planner.MockDBRowImpl.logtime</a></div><div class="ttdeci">final long logtime</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00061">MockDBRowImpl.java:61</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_ad2c4e544e48e504eeddd74b58ed5a9c2"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">com.teragrep.pth_06.planner.MockDBRowImpl.path</a></div><div class="ttdeci">final String path</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00060">MockDBRowImpl.java:60</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_ada7413bbc6e788c371fb66978472187a"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">com.teragrep.pth_06.planner.MockDBRowImpl.directory</a></div><div class="ttdeci">final String directory</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00054">MockDBRowImpl.java:54</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_aff3d6346e0f2cd61bd02b7f62ecf1df5"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">com.teragrep.pth_06.planner.MockDBRowImpl.logdate</a></div><div class="ttdeci">final Date logdate</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00058">MockDBRowImpl.java:58</a></div></div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00070">70</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>      {</div>
+<div class="line"><span class="lineno">   83</span>        this.id = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a5721c5202c01b3fd47011693536c0247">id</a>;</div>
+<div class="line"><span class="lineno">   84</span>        this.directory = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a>;</div>
+<div class="line"><span class="lineno">   85</span>        this.stream = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a>;</div>
+<div class="line"><span class="lineno">   86</span>        this.host = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a>;</div>
+<div class="line"><span class="lineno">   87</span>        this.logtag = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a>;</div>
+<div class="line"><span class="lineno">   88</span>        this.logdate = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a>;</div>
+<div class="line"><span class="lineno">   89</span>        this.bucket = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a>;</div>
+<div class="line"><span class="lineno">   90</span>        this.path = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a>;</div>
+<div class="line"><span class="lineno">   91</span>        this.logtime = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a>;</div>
+<div class="line"><span class="lineno">   92</span>        this.filesize = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a>;</div>
+<div class="line"><span class="lineno">   93</span>        this.uncompressedFilesize = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a>;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a3138a216a47e717936af81c0bdbe0ded"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">com.teragrep.pth_06.planner.MockDBRowImpl.uncompressedFilesize</a></div><div class="ttdeci">final Long uncompressedFilesize</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00068">MockDBRowImpl.java:68</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a4e0edf049f9484e0e816f16daa1cc6ad"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">com.teragrep.pth_06.planner.MockDBRowImpl.host</a></div><div class="ttdeci">final String host</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00061">MockDBRowImpl.java:61</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a5721c5202c01b3fd47011693536c0247"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a5721c5202c01b3fd47011693536c0247">com.teragrep.pth_06.planner.MockDBRowImpl.id</a></div><div class="ttdeci">final long id</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00058">MockDBRowImpl.java:58</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a7a005b354f9912c356d695e4befe6939"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">com.teragrep.pth_06.planner.MockDBRowImpl.filesize</a></div><div class="ttdeci">final long filesize</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00067">MockDBRowImpl.java:67</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a92085e7ae34e4667e819c4d7f507179e"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">com.teragrep.pth_06.planner.MockDBRowImpl.stream</a></div><div class="ttdeci">final String stream</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00060">MockDBRowImpl.java:60</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_aa67ed8d74482205e8584da9718a9aa46"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">com.teragrep.pth_06.planner.MockDBRowImpl.logtag</a></div><div class="ttdeci">final String logtag</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00062">MockDBRowImpl.java:62</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_ac307ee92ada9f34eee08b326373949d3"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">com.teragrep.pth_06.planner.MockDBRowImpl.bucket</a></div><div class="ttdeci">final String bucket</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00064">MockDBRowImpl.java:64</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_aca0a1923507969ad19bdcf8cbee7ee40"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">com.teragrep.pth_06.planner.MockDBRowImpl.logtime</a></div><div class="ttdeci">final long logtime</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00066">MockDBRowImpl.java:66</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_ad2c4e544e48e504eeddd74b58ed5a9c2"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">com.teragrep.pth_06.planner.MockDBRowImpl.path</a></div><div class="ttdeci">final String path</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00065">MockDBRowImpl.java:65</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_ada7413bbc6e788c371fb66978472187a"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">com.teragrep.pth_06.planner.MockDBRowImpl.directory</a></div><div class="ttdeci">final String directory</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00059">MockDBRowImpl.java:59</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_aff3d6346e0f2cd61bd02b7f62ecf1df5"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">com.teragrep.pth_06.planner.MockDBRowImpl.logdate</a></div><div class="ttdeci">final Date logdate</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00063">MockDBRowImpl.java:63</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,10 +287,10 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#ad44471477954593511cbdb304a0ded76">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00122">122</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                           {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a>;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00127">127</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                           {</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a>;</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -304,23 +310,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00147">147</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                            {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordtype">int</span> comparisonResult = Long.compare(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a>, o.logtime());</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span> (comparisonResult == 0) {</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span> (!this.<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ae4e9a65ece0b7a87f255be4c24cf9870">equals</a>(o)) {</div>
-<div class="line"><span class="lineno">  151</span>                comparisonResult -= 1;</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> comparisonResult;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_ae4e9a65ece0b7a87f255be4c24cf9870"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ae4e9a65ece0b7a87f255be4c24cf9870">com.teragrep.pth_06.planner.MockDBRowImpl.equals</a></div><div class="ttdeci">boolean equals(final Object o)</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00158">MockDBRowImpl.java:158</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_a8071f9820d4cfbfa5181f223a2e3b338_cgraph.svg" width="486" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00152">152</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>                                            {</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a8bb2c9a150bbd457abf15e9e94c01bcd">COMPARATOR</a>.compare(<span class="keyword">this</span>, o);</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a8bb2c9a150bbd457abf15e9e94c01bcd"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a8bb2c9a150bbd457abf15e9e94c01bcd">com.teragrep.pth_06.planner.MockDBRowImpl.COMPARATOR</a></div><div class="ttdeci">static final Comparator&lt; MockDBRow &gt; COMPARATOR</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00054">MockDBRowImpl.java:54</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a756d93c0121b64ce463a17e1bf14bda0" name="a756d93c0121b64ce463a17e1bf14bda0"></a>
@@ -340,10 +335,10 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#a72b0def5bf253cb3babc246462187ead">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00097">97</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                              {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a>;</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00102">102</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>                              {</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a>;</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -363,18 +358,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00158">158</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>                                          {</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) {</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  161</span>        }</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keyword">final</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a491c6aa5a3dca1d76ed1e18c65967957">MockDBRowImpl</a> mockDBRow = (<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a491c6aa5a3dca1d76ed1e18c65967957">MockDBRowImpl</a>) o;</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> <span class="keywordtype">id</span> == mockDBRow.id</div>
-<div class="line"><span class="lineno">  164</span>                &amp;&amp; <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a> == mockDBRow.logtime &amp;&amp; <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a> == mockDBRow.filesize &amp;&amp; Objects</div>
-<div class="line"><span class="lineno">  165</span>                        .equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a>, mockDBRow.directory)</div>
-<div class="line"><span class="lineno">  166</span>                &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a>, mockDBRow.stream) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a>, mockDBRow.host) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a>, mockDBRow.logtag) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a>, mockDBRow.logdate) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a>, mockDBRow.bucket) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a>, mockDBRow.path) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a>, mockDBRow.uncompressedFilesize);</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a491c6aa5a3dca1d76ed1e18c65967957"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a491c6aa5a3dca1d76ed1e18c65967957">com.teragrep.pth_06.planner.MockDBRowImpl.MockDBRowImpl</a></div><div class="ttdeci">MockDBRowImpl(final long id, final String directory, final String stream, final String host, final String logtag, final Date logdate, final String bucket, final String path, final long logtime, final long filesize, final Long uncompressedFilesize)</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00065">MockDBRowImpl.java:65</a></div></div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00157">157</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>                                          {</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) {</div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  160</span>        }</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keyword">final</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a491c6aa5a3dca1d76ed1e18c65967957">MockDBRowImpl</a> mockDBRow = (<a class="code hl_function" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a491c6aa5a3dca1d76ed1e18c65967957">MockDBRowImpl</a>) o;</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <span class="keywordtype">id</span> == mockDBRow.id</div>
+<div class="line"><span class="lineno">  163</span>                &amp;&amp; <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a> == mockDBRow.logtime &amp;&amp; <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a> == mockDBRow.filesize &amp;&amp; Objects</div>
+<div class="line"><span class="lineno">  164</span>                        .equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a>, mockDBRow.directory)</div>
+<div class="line"><span class="lineno">  165</span>                &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a>, mockDBRow.stream) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a>, mockDBRow.host) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a>, mockDBRow.logtag) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a>, mockDBRow.logdate) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a>, mockDBRow.bucket) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a>, mockDBRow.path) &amp;&amp; Objects.equals(<a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a>, mockDBRow.uncompressedFilesize);</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_html_a491c6aa5a3dca1d76ed1e18c65967957"><div class="ttname"><a href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a491c6aa5a3dca1d76ed1e18c65967957">com.teragrep.pth_06.planner.MockDBRowImpl.MockDBRowImpl</a></div><div class="ttdeci">MockDBRowImpl(final long id, final String directory, final String stream, final String host, final String logtag, final Date logdate, final String bucket, final String path, final long logtime, final long filesize, final Long uncompressedFilesize)</div><div class="ttdef"><b>Definition</b> <a href="MockDBRowImpl_8java_source.html#l00070">MockDBRowImpl.java:70</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -383,7 +378,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_ae4e9a65ece0b7a87f255be4c24cf9870_icgraph.svg" width="486" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl_ae4e9a65ece0b7a87f255be4c24cf9870_icgraph.svg" width="224" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -405,10 +400,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#a74ca25ad9ccc26eca93b3a20d359bd4a">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00137">137</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>                           {</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a>;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00142">142</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>                           {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a>;</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -427,14 +422,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00170">170</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>                          {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> Objects</div>
-<div class="line"><span class="lineno">  172</span>                .hash(</div>
-<div class="line"><span class="lineno">  173</span>                        <span class="keywordtype">id</span>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a>,</div>
-<div class="line"><span class="lineno">  174</span>                        <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a></div>
-<div class="line"><span class="lineno">  175</span>                );</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00169">169</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>                          {</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">return</span> Objects</div>
+<div class="line"><span class="lineno">  171</span>                .hash(</div>
+<div class="line"><span class="lineno">  172</span>                        <span class="keywordtype">id</span>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a>, <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a>,</div>
+<div class="line"><span class="lineno">  173</span>                        <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a></div>
+<div class="line"><span class="lineno">  174</span>                );</div>
+<div class="line"><span class="lineno">  175</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -455,10 +450,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#aa8ad21bb5a8f9b0594938f79c167ea8a">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00107">107</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                         {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a>;</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00112">112</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>                         {</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a>;</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -479,10 +474,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#a0774864816bfa4ed24d7037daa10b3b2">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00092">92</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                     {</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a5721c5202c01b3fd47011693536c0247">id</a>;</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00097">97</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>                     {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a5721c5202c01b3fd47011693536c0247">id</a>;</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -503,10 +498,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#ad6525054bcae052f479a03b2e4ca3bf7">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00117">117</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                          {</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a>;</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00122">122</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>                          {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a>;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -527,10 +522,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#afc6e92c8736a723c8e3c6673593b63c6">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00112">112</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>                           {</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a>;</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00117">117</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                           {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a>;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -551,10 +546,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#abbdec5d031093faa980c5b0e86dbaa7e">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00132">132</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                          {</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a>;</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00137">137</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>                          {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a>;</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -575,10 +570,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#ab614cd7a7083bbae02e6cb864d5aea64">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00127">127</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                         {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a>;</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00132">132</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                         {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a>;</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -599,10 +594,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#a092b8e42025da6f3c6ad5ea92a1a273f">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00102">102</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                           {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a>;</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00107">107</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                           {</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a>;</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -621,13 +616,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00179">179</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                             {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;MockDBRowImpl{&quot;</span> + <span class="stringliteral">&quot;id=&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;, directory=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, stream=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a> + <span class="charliteral">&#39;\&#39;&#39;</span></div>
-<div class="line"><span class="lineno">  181</span>                + <span class="stringliteral">&quot;, host=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, logtag=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, logdate=&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a> + <span class="stringliteral">&quot;, bucket=&#39;&quot;</span></div>
-<div class="line"><span class="lineno">  182</span>                + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, path=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, logtime=&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a> + <span class="stringliteral">&quot;, filesize=&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a></div>
-<div class="line"><span class="lineno">  183</span>                + <span class="stringliteral">&quot;, uncompressedFilesize=&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a> + <span class="charliteral">&#39;}&#39;</span>;</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00178">178</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>                             {</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;MockDBRowImpl{&quot;</span> + <span class="stringliteral">&quot;id=&quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;, directory=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ada7413bbc6e788c371fb66978472187a">directory</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, stream=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a92085e7ae34e4667e819c4d7f507179e">stream</a> + <span class="charliteral">&#39;\&#39;&#39;</span></div>
+<div class="line"><span class="lineno">  180</span>                + <span class="stringliteral">&quot;, host=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a4e0edf049f9484e0e816f16daa1cc6ad">host</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, logtag=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aa67ed8d74482205e8584da9718a9aa46">logtag</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, logdate=&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aff3d6346e0f2cd61bd02b7f62ecf1df5">logdate</a> + <span class="stringliteral">&quot;, bucket=&#39;&quot;</span></div>
+<div class="line"><span class="lineno">  181</span>                + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ac307ee92ada9f34eee08b326373949d3">bucket</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, path=&#39;&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#ad2c4e544e48e504eeddd74b58ed5a9c2">path</a> + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, logtime=&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#aca0a1923507969ad19bdcf8cbee7ee40">logtime</a> + <span class="stringliteral">&quot;, filesize=&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a7a005b354f9912c356d695e4befe6939">filesize</a></div>
+<div class="line"><span class="lineno">  182</span>                + <span class="stringliteral">&quot;, uncompressedFilesize=&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a> + <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -648,10 +643,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#a530a3c1472c332aacad872702a077e48">com.teragrep.pth_06.planner.MockDBRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00142">142</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                       {</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a>;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00147">147</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>                                       {</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRowImpl.html#a3138a216a47e717936af81c0bdbe0ded">uncompressedFilesize</a>;</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -676,7 +671,35 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00059">59</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00064">64</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+
+</div>
+</div>
+<a id="a8bb2c9a150bbd457abf15e9e94c01bcd" name="a8bb2c9a150bbd457abf15e9e94c01bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb2c9a150bbd457abf15e9e94c01bcd">&#9670;&#160;</a></span>COMPARATOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Comparator&lt;<a class="el" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html">MockDBRow</a>&gt; com.teragrep.pth_06.planner.MockDBRowImpl.COMPARATOR</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= Comparator</div>
+<div class="line">            .comparingLong(<a class="code hl_function" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#abbdec5d031093faa980c5b0e86dbaa7e">MockDBRow::logtime</a>)</div>
+<div class="line">            .thenComparingInt(System::identityHashCode)</div>
+<div class="ttc" id="ainterfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow_html_abbdec5d031093faa980c5b0e86dbaa7e"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1MockDBRow.html#abbdec5d031093faa980c5b0e86dbaa7e">com.teragrep.pth_06.planner.MockDBRow.logtime</a></div><div class="ttdeci">long logtime()</div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00054">54</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -700,7 +723,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00054">54</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00059">59</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -724,7 +747,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00062">62</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00067">67</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -748,7 +771,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00056">56</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00061">61</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -772,7 +795,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00053">53</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00058">58</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -796,7 +819,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00058">58</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00063">63</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -820,7 +843,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00057">57</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00062">62</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -844,7 +867,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00061">61</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00066">66</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -868,7 +891,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00060">60</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00065">65</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -892,7 +915,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00055">55</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00060">60</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
@@ -916,7 +939,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00063">63</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MockDBRowImpl_8java_source.html#l00068">68</a> of file <a class="el" href="MockDBRowImpl_8java_source.html">MockDBRowImpl.java</a>.</p>
 
 </div>
 </div>
