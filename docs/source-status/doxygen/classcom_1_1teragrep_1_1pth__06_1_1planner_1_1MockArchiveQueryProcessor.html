@@ -387,9 +387,9 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   86</span>        <span class="keyword">final</span> PriorityQueue&lt;MockDBRow&gt; slice = <a class="code hl_variable" href="classcom_1_1teragrep_1_1pth__06_1_1planner_1_1MockArchiveQueryProcessor.html#ad0a1ad28e04df866d396e5da32ae97d4">sliceableTestDataSource</a>.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1pth__06_1_1planner_1_1Sliceable.html#abd05bccf06880977e9be05d2b830d2fe">slice</a>(earliestAvailableStartHour, endHour);</div>
 <div class="line"><span class="lineno">   87</span> </div>
 <div class="line"><span class="lineno">   88</span>        <span class="keyword">final</span> MockDataProvider provider = ctx -&gt; {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="comment">// use ordinary jooq api to create an org.jooq.result object.</span></div>
-<div class="line"><span class="lineno">   90</span>            <span class="comment">// you can also use ordinary jooq api to load csv files or</span></div>
-<div class="line"><span class="lineno">   91</span>            <span class="comment">// other formats, here!</span></div>
+<div class="line"><span class="lineno">   89</span>            <span class="comment">/* use ordinary jooq api to create an org.jooq.result object.</span></div>
+<div class="line"><span class="lineno">   90</span><span class="comment">            * you can also use ordinary jooq api to load csv files or</span></div>
+<div class="line"><span class="lineno">   91</span><span class="comment">            * other formats, here! */</span></div>
 <div class="line"><span class="lineno">   92</span>            <span class="keyword">final</span> DSLContext create = DSL.using(SQLDialect.DEFAULT);</div>
 <div class="line"><span class="lineno">   93</span>            <span class="keyword">final</span> Result&lt;Record11&lt;ULong, String, String, String, String, Date, String, String, Long, ULong, ULong&gt;&gt; result = create</div>
 <div class="line"><span class="lineno">   94</span>                    .newResult(</div>
