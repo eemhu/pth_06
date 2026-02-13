@@ -18,5 +18,6 @@ var searchData=
   ['streamdbclienttest_2ejava_15',['StreamDBClientTest.java',['../StreamDBClientTest_8java.html',1,'']]],
   ['streamrecord_2ejava_16',['StreamRecord.java',['../StreamRecord_8java.html',1,'']]],
   ['stringequalscondition_2ejava_17',['StringEqualsCondition.java',['../StringEqualsCondition_8java.html',1,'']]],
-  ['stringequalsconditiontest_2ejava_18',['StringEqualsConditionTest.java',['../StringEqualsConditionTest_8java.html',1,'']]]
+  ['stringequalsconditiontest_2ejava_18',['StringEqualsConditionTest.java',['../StringEqualsConditionTest_8java.html',1,'']]],
+  ['stubable_2ejava_19',['Stubable.java',['../Stubable_8java.html',1,'']]]
 ];
