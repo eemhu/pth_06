@@ -1,1 +1,1 @@
-var branches = ["main", "metrics-reservoirs", "source-status", "div-by-zero-fix", "issue-254", "issue-238", "fix-equals", "spark-3.5", "encapsulate-lists", "latency-metrics-accuracy-fix", "apply-spotless"]
+var branches = ["main", "metrics-reservoirs", "source-status", "div-by-zero-fix", "issue-254", "issue-238", "fix-equals", "spark-3.5", "encapsulate-lists", "issue-316", "latency-metrics-accuracy-fix", "apply-spotless"]
